@@ -1,0 +1,50 @@
+*.txt
+*.pdf
+*.tmp
+*.png
+/local/
+*.DS_Store
+*.mat
+*.csv
+*.hidden
+
+# don't ignore important .txt and .csv files
+!LICENSE.txt
+
+# running files
+*.pyc
+*.py~
+.~lock*
+*.swp
+
+# Python cache
+*__pycache__/
+*.cache
+.ipynb_checkpoints/
+
+# simulation outputs
+out/
+config.py
+matplotlibrc
+*.pickle
+*.sav
+
+# setup.py files
+*.egg-info
+dist/
+
+# virtual enviroment
+env/
+bin/
+etc/
+lib/
+lib64
+share/
+pyvenv.cfg
+.vscode
+
+# downloads
+*.gz
+
+# setup
+setup.log
