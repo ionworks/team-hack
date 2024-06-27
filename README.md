@@ -35,10 +35,11 @@ All data is stored separately from this repository. You can set a data filepath 
 DATA_PATH="path/to/data"
 ```
 Then, in any script or notebook you can retive the data path by doing
-```python3
-import projectname
 
-data_path = projectname.utils.environ["DATA_PATH"]
+```python3
+import hackion
+
+data_path = hackion.utils.environ["DATA_PATH"]
 ```
 Make sure you add `.env` to `.gitignore`. Alternatively, you can simply specify the filepath manually. 
 

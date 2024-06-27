@@ -1,20 +1,23 @@
 [build-system]
-requires = ["flit_core >=3.2,<4"]
-build-backend = "flit_core.buildapi"
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
 
 [project]
-name = "project"
+name = "hackion"
 authors = [
-    {name = "IonWorks Technologies Inc.", email = "info@ion-works.com"},
+    {name = "IonWorks Technologies Inc.", email = "info@ionworks.com"},
 ]
-description = "Code provided by IonWorks Technologies Inc."
-readme = "README.md"
-dynamic = ["version"]
-requires-python = ">=3.8,<3.12"
+description = "Hackathon for team building"
+dynamic = ["version", "readme"]
+requires-python = ">=3.10,<3.12"
 dependencies = [
     "pybamm",
-    "python-dotenv",
 ]
 
-[project.entry-points.pybamm_parameter_sets]
-MyCell = "projectname.parameters.mycell:get_parameter_values"
+[tool.setuptools_scm]
+
+[tool.setuptools.packages.find]
+include = ["celldesigner"]
+
+[tool.setuptools.dynamic]
+readme = {file = ["README.md"], content-type = "text/markdown"}
