@@ -1,6 +1,4 @@
 import numpy as np
-import matplotlib.pyplot as plt
-
 
 class Vehicle:
     mass: float = 1500
@@ -95,13 +93,5 @@ class Vehicle:
 
         # Calculate power
         power = total_force * speed
-
-        # Plot the power profile
-        plt.plot(t, power)
-        plt.xlabel('Time (s)')
-        plt.ylabel('Power (W)')
-        plt.title('Power Profile')
-        plt.grid(True)
-        plt.show()
 
         return t, power
