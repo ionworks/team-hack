@@ -5,8 +5,6 @@ class CityMap(dict):
     def __init__(self, nx, ny):
         self.nx = nx
         self.ny = ny
-        self.nodes = np.arange(nx * ny).reshape((nx, ny))
-        self.coords = np.indices((nx, ny))
 
     def city_block_distance(self, start, end):
         x1, y1, = start
