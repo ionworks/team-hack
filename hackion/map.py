@@ -5,6 +5,7 @@ class CityMap(dict):
     def __init__(self, nx, ny):
         self.nx = nx
         self.ny = ny
+        self.speed = np.ones((nx, ny)) * 30
 
     def city_block_distance(self, start, end):
         x1, y1, = start
@@ -13,6 +14,9 @@ class CityMap(dict):
     
     def random_destination(self):
         return [np.random.randint(0, self.nx), np.random.randint(0, self.ny)]
+
+    def get_speed(self, position):
+        return self.speed[position[0], position[1]]
 
 if __name__ == "__main__":
     my_map = CityMap(10, 10)
